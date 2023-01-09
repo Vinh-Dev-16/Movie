@@ -1,0 +1,202 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Obito',sans-serif;
+    
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: rgba(46, 36, 36, 0.959);
+}
+::-webkit-scrollbar{
+    width: 8px;
+ }
+ ::-webkit-scrollbar-thumb{
+     background: rgb(44, 68, 62);
+     border-radius: 6px;
+ }
+.conatainer_index{
+    position: relative;
+    width: 100%;
+}
+.conatainer_index .navigation{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background:rgb(35, 39, 38);
+    border-left: 10px solid rgb(35, 39, 38);
+    transition: 0.5s;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+ .navigation.active{
+    width: 80px;
+}
+.navigation::-webkit-scrollbar{
+   width: 8px;
+}
+.navigation::-webkit-scrollbar-thumb{
+    background: rgb(44, 68, 62);
+    border-radius: 6px;
+}
+.conatainer_index .navigation ul{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+.conatainer_index .navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.conatainer_index .navigation ul li:hover{
+    background: #fff;
+}
+.conatainer_index .navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+.conatainer_index .navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color:#fff ;
+}
+.conatainer_index .navigation ul li:hover a{
+    color: rgb(35, 39, 38);
+}
+.conatainer_index .navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    /* margin-top: 15px; */
+    text-align: center;
+}
+.conatainer_index .navigation ul li a .icon ion-icon{
+    font-size: 1.75rem;
+    margin-top: 11px;
+}
+.conatainer_index .navigation ul li a .title_index{
+        position: relative;
+        display: block;
+        padding: 0 10px;
+        height: 60px;
+        line-height: 60px;
+        text-align: start;
+        white-space: nowrap;
+}
+.main_index{
+    position: absolute;
+    display: block;
+    left: 250px;
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    transition: 0.5s;
+}
+
+.main_index .topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.main_index .logo{
+    position: relative;
+    color:rgba(223, 213, 213, 0.877);
+    font-size: 16px;
+
+}   
+.main_index .page{
+    position: relative;
+    font-size: 23px;
+    color:rgba(223, 213, 213, 0.877);
+    text-align: center;
+    flex: 2;
+}
+
+/* header login */
+.user_login{
+    position: relative;
+    margin-top: -10px;
+    width: 165px;
+    height: 5px;
+    z-index: 10000000;
+   
+}
+.user_login::before{
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 2px;
+    z-index: 1000;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    border-top:2px solid #fff ;
+    border-right: 2px solid #fff;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.user_login.active::before{
+    top:8px;
+    transform: rotate(-225deg);
+
+}
+.user_login input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+
+}
+.user_login  .option{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    background: #fff;
+    box-shadow:  0 30px 30px  rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+.user_login.active  .option{
+    display: block;
+}
+.user_login .option div{
+   cursor: pointer;
+   padding: 5px 5px;
+   z-index: 10000000;
+}
+.user_login .option div:hover{
+    background: #b71c1c;
+}
+.user_login .option div a{
+    text-decoration: none;
+    color: black;
+}
+.user_login .option div ion-icon{
+    position: relative;
+    font-size: 16px;
+    padding-right: 3px;
+}

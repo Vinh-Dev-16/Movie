@@ -1,0 +1,73 @@
+body{
+    margin:0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    font-family: Obito,sans-serif;
+    background-color: rgba(46, 36, 36, 0.959);
+}
+.container_mvlist{
+    display:flex;
+    align-items:stretch;
+    flex-wrap: wrap;
+
+}
+.movielist_btn{
+    margin: 20px 39px;
+}
+.movielist_btn a{
+    text-decoration: none;
+    color: #fff;
+    padding: 7px 30px;
+}
+.mv_btn{
+    text-decoration: none;
+    color: #fff;
+    padding: 7px 30px;
+    margin: 20px 39px;
+}
+.card_mvlist{
+    min-height: 250px;
+    width: 200px;
+    object-fit: cover;
+    margin-left: 25px;
+    color: #fff;
+    height: 100%;
+}
+.card{
+    box-sizing: border-box;
+    border-color:rgb(37, 33, 33) ;
+    border-radius: 15px;
+}
+.card_mvlist img{
+    max-height: 250px;
+    width: auto;
+    overflow: hidden;
+    object-fit: cover;
+}
+.card h5{
+    font-size: 16px;
+}
+.card-body{
+    background-color:  rgb(37, 33, 33);
+    align-items: center;
+    height: 200px;
+}
+.card .detail{
+    padding: 5px 40px;
+    margin-left: 5%;
+}
+.card .edit{
+    margin-left: 5%;
+    margin-right: 15px;
+}
+.card .edit, .card .delete{
+    margin-top: 10px;
+}
+.watch{
+    height: 30px;
+    width: 66%;
+    margin-left: 39px;
+    margin-top: 10px;
+}

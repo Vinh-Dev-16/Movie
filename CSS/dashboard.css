@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Obito',sans-serif;
+    
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: rgba(46, 36, 36, 0.959);
+}
+::-webkit-scrollbar{
+    width: 8px;
+ }
+ ::-webkit-scrollbar-thumb{
+     background: rgb(44, 68, 62);
+     border-radius: 6px;
+ }
+ .container_dashboard{
+    position: absolute;
+    top:50px;
+    left: 250px;
+    width: calc(100% - 250px);
+ }
+
+.card_box{
+    position: relative;
+    width: 100%;
+    padding:20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+}
+.card_box .card{
+    position: relative;
+    background: rgb(44, 68, 62);
+    padding: 25px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+.card_box .card .numbers{
+    position: relative;
+    font-weight: 500;
+    font-size: 2rem;
+    color: gb(35, 39, 38);
+}
+.card_box .card .card_name{
+    color:rgb(36, 33, 33) ;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+.card_box .card .icon_bx{
+    font-size: 3.5rem;
+    color: rgb(36, 33, 33);
+
+}
+.card_box .card:hover{
+    background: rgb(35, 39, 38);
+}
+.card_box .card:hover .icon_bx,
+.card_box .card:hover .card_name,
+.card_box .card:hover .numbers{
+ color: #fff;
+}
+
+/* Responsive tablet */
+@media only screen and (min-width:46.25em) and (max-width: 63.9375em) {
+    .navigation{
+        display: none;
+    }
+    .main_index{
+        width: 100%;
+        left: 10px;
+    }
+    .container_dashboard{
+        width: 100%;
+        left: 0;
+    }
+    .body{
+        margin-left: 10px;
+    }
+    .card_box{
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    
+    }
+   
+}
+@media only screen and (max-width:46.1875em) {
+    .navigation{
+        display: none;
+    }
+    .container_dashboard{
+        width: 100%;
+        left: 0px;
+    }
+    .main_index{
+        width: 100%;
+        left: 10px;
+    }
+    .body{
+        margin-left: 10px;
+    }
+    .card_box{
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

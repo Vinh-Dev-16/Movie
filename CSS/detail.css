@@ -1,0 +1,44 @@
+body{
+    margin:0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    font-family: Obito,sans-serif;
+    background-color: rgba(46, 36, 36, 0.959);
+}
+.intro{
+    display: flex;
+    align-items: flex-start;
+    height:400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.intro .watch{
+    flex: 1;
+}
+.intro img{
+    height: 270px;
+    width: auto;
+    margin: 20px 10px;
+    object-fit: cover;
+}
+.intro .deces{
+    flex: 3;
+    margin-top: 20px;
+}
+.intro .name_mv{
+    color: aqua;
+    font-size: 21px;
+}
+.intro .decestion{
+    color: #fff;
+    font-size: 16px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-top: 50px;
+    height: 150px;
+    width: 80%;
+}
+ 

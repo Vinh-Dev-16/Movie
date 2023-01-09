@@ -1,0 +1,171 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: #333;
+    font-size: 62.5%;
+    font-family: "Obito", sans-serif;
+}
+.wrapper_login{
+    object-fit: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8)),
+    url('https://assets.nflxext.com/ffe/siteui/vlv3/a795ee10-8c6d-467c-8159-254be2b69013/9ed9b121-ac05-4486-9f33-711d6c460c7a/VN-vi-20220912-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
+}
+.main {
+    position: relative;
+    width: 360px;
+    height: 425px;
+    min-height: 100px;
+    padding: 32px 24px;
+    text-align: center;
+    background: rgba(27, 26, 26, 0.959);
+    border-radius: 5px;
+    margin: 24px;
+    align-self: center;
+    box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);
+    color: #fff;
+    overflow: hidden;
+}
+.main::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 360px;
+    height: 400px;
+    background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.main::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 360px;
+    height: 400px;
+    background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+@keyframes animate{
+    0%
+    {transform: rotate(0deg);
+    }
+    100%
+    {transform: rotate(360deg);}
+}
+.form {
+    position: absolute;
+    z-index: 100;
+    inset: 3px;
+    background: #28292d;
+    padding: 32px 24px;
+}
+
+.form .heading {
+    font-size: 2rem;
+    font-style: italic;
+}
+.form-control{
+    border: 2px solid  rgba(8, 8, 8, 0.616);
+    padding: 16px 12px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: 0.25s ease;
+    background: #28292d;
+    color: #fff;
+}
+.form-control:hover{
+    border-color: #1dbfaf;
+}
+.form-group {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+    position: relative;
+}
+.form-label{
+    text-align: left;
+    position: absolute;
+    top:65%;
+    transform: translateY(-50%);
+    left: 13px;
+    user-select: none;
+    z-index: 10000;
+    padding-bottom: 6px;
+    line-height: 1.8rem;
+    font-size: 1.6rem;
+    color: #999;
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+.form-control:not(:placeholder-shown) + .form-label, 
+.form-control:focus + .form-label {
+    top: 10px;
+    padding: 0 10px;
+    left: 20px;
+    display: inline-block;
+    background-color: #28292d;
+}
+
+.form-submit {
+    outline: none;
+    background-color: #1dbfaf;
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: #1ac7b6;
+}
+
+.spacer {
+    margin-top: 36px;
+}
+.sign-up {
+    margin-top: 30px;
+    font-size: 14px;
+}
+.sign-up a{
+    color: #fff;
+    transition: 0.25s;
+}
+
+.sign-up a:hover{
+    color: #1ac7b6;
+}
+.home{
+    margin-top: 20px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.home a{
+    color: #fff;
+    transition: 0.25s;
+
+}
+.home a:hover{
+    color: #1ac7b6;
+}
+
+.alert{
+    font-size: 15px;
+    color: red;
+    margin-top:-10px;
+    margin-bottom: 15px;
+}

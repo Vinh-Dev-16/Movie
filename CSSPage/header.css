@@ -1,0 +1,317 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Obito',sans-serif;
+    
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #343a40;
+}
+
+/* Hiển thị thanh scrollbar */
+
+::-webkit-scrollbar{
+    width: 8px;
+ }
+ ::-webkit-scrollbar-thumb{
+     background: rgb(44, 68, 62);
+     border-radius: 6px;
+ }
+ .wrapper_user{
+    width: 100%;
+    height: 200px;
+ }
+ .navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+ }
+ .navbar .logo{
+    margin: 10px 10px;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+ }
+ .navbar .logo a{
+    text-decoration: none;
+    color: #b71c1c;
+ }
+ .logo a img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+ }
+ .nav_item{
+    display: block; 
+    margin-left: 15px;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+ }
+ .nav_item ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.nav_item ul li {
+    padding: 18px 8px;
+}
+.nav_item ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.5s;
+}
+.nav_item ul li:hover a:not(.active){
+    color:#b71c1c;
+}
+.auth{
+    margin: 10px 10px;
+}
+.auth a{
+    text-decoration: none;
+}
+.nav_item ul li a.active{
+    color: #b71c1c;
+}
+
+/* Dropdown */
+.nav_item .dropdown{
+    position: relative;
+}
+.dropdown_content{
+    box-sizing: border-box;
+    width: 300px;
+    min-height: 160px;
+    background-color: #fff;
+    color: black;
+    position: absolute;
+    top: 50px;
+    z-index: 10000;
+    border-radius: 6px;
+    display: none;
+}
+.dropdown_content::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    border-right: 6px solid transparent ;
+    border-left: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+    transform: translateY(-100%);
+}
+.year_drop::before{
+    left: 3%;
+}
+.year_drop{
+    width: 200px !important;
+}
+.nation{
+    min-height: 130px;
+}
+.year_hidden{
+    height: 200px !important;
+    flex-direction: row;
+}
+.flex_cat{
+    display: flex;
+    justify-content: space-between;
+}
+.nav_item .dropdown:hover .dropdown_content{
+    display: block;
+}
+.cat_name{
+    height: 100%;
+    display: inline-block;
+    width: 50%;
+}
+.cat_name a{
+    display: block;
+    text-decoration: none;
+    word-wrap: break-word;
+    color: black !important;
+    padding: 20px;
+    padding-top: 10px;
+    font-size: 17px !important;
+    transition: 0.25s;
+}
+.cat_name a:hover{
+    color: #b71c1c !important;
+}
+.nav_form{
+    margin-top: 13px;
+}
+.auth {
+    box-sizing: border-box;
+    background: rgba(190, 26, 26, 0.884);
+}
+.auth button{
+    padding: 8px 15px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    background: rgba(190, 26, 26, 0.884);
+    border: none;
+    transition: 0.5 ease-in-out;
+}
+.auth button:hover{
+    opacity: 0.7;
+}
+.search_nav{
+    margin: 10px;
+    margin-right: 20px;
+    position: relative;
+    max-width: 250px;
+    margin-top: 22px;
+}
+.search_nav input{
+    padding: 6px 35px;
+    font-size: 14px;
+    border-radius: 5px;
+    opacity: 0.6;
+}
+.search_nav input:focus{
+    outline: none;
+    opacity: 1;
+}
+.search_nav button{
+    position: absolute;
+    left: 2px;
+    top: 3px;
+    border: none;
+    outline: none;
+    background-color:rgb(175 171 171);
+    opacity: 0.6;
+}
+.search_nav button:focus{
+    opacity: 1;
+}
+.search_nav button ion-icon{
+    font-size: 23px;
+    border: none;
+}
+#search_result{
+    list-style: none;
+    width: 100%;
+    z-index: 1000;
+    position: absolute;
+    background-color: black;
+   
+}
+#search_result li{
+    box-sizing: border-box;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+}
+#search_result a{
+    display: block;
+    padding: 5px 5px;
+}
+#search_result .name{
+    display: block;
+    padding: 20px 5px;
+}
+#search_result .img,.name:hover{
+    background-color: rgba(29, 25, 25, 0.959);
+}
+/* header login */
+.user_login{
+    position: relative;
+    margin-top: 10px;
+    width: 165px;
+    height: 5px;
+    z-index: 100000000000000;
+    margin-top: 24px;
+}
+.user_login::before{
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 2px;
+    z-index: 1000;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #333;
+    border-top:2px solid #fff ;
+    border-right: 2px solid #fff;
+    transform: rotate(-45deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.user_login.active::before{
+    top:8px;
+    transform: rotate(-225deg);
+
+}
+.user_login input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.user_login  .option{
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    background: #fff;
+    box-shadow:  0 30px 30px  rgba(0,0,0,0.05);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+}
+.user_login.active  .option{
+    display: block;
+}
+.user_login .option div{
+   cursor: pointer;
+   padding: 5px 5px;
+   z-index: 10000000;
+}
+.user_login .option div:hover{
+    background: #b71c1c;
+}
+.user_login .option div a{
+    text-decoration: none;
+    color: black;
+}
+.user_login .option div ion-icon{
+    position: relative;
+    font-size: 16px;
+    padding-right: 3px;
+}
+/* Responsive mobile */
+/* 
+@media only screen and (max-width:46.1875em) {
+    
+}
+
+/* Responsive tablet */
+
+/* @media only screen and (min-width:66.375em) and (max-width: 83.25em){
+  .search_nav{
+    display: none;
+  }   
+}
+
+@media only screen and (max-width:66.3125rem) and (min-width:46.25em) {
+    .auth{
+        display: none;
+    }
+    .search_nav{
+        display: none;
+    }
+} */ 
